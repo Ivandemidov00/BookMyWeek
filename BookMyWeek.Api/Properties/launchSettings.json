@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json.schemastore.org/launchsettings.json",
+  "profiles": {
+    "BookMyWeek.Api": {
+      "commandName": "Project",
+      "environmentVariables": {
+        
+      },
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "applicationUrl": "http://localhost:5000",
+      "dotnetRunMessages": true
+    }
+  }
+}
