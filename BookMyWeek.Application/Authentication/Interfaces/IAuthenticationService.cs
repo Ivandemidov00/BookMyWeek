@@ -1,3 +1,5 @@
+using BookMyWeek.Application.Authentication.Model;
+
 namespace BookMyWeek.Application.Authentication.Interfaces;
 
 public interface IAuthenticationService

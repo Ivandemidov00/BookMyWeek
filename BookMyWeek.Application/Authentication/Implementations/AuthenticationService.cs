@@ -1,4 +1,5 @@
 using BookMyWeek.Application.Authentication.Interfaces;
+using BookMyWeek.Application.Authentication.Model;
 using BookMyWeek.Infrastructure.User.Interfaces;
 
 namespace BookMyWeek.Application.Authentication.Implementations;

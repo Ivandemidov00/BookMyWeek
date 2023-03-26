@@ -1,5 +1,6 @@
 using System.Security.Claims;
 using BookMyWeek.Application.Authentication;
+using BookMyWeek.Application.Authentication.Model;
 using BookMyWeek.Application.Authentication.Models;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
