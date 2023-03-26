@@ -6,7 +6,7 @@ namespace BookMyWeek.Application.Controllers;
 
 [ApiController]
 [Route("api/userDatabase")]
-public class UserController
+public class UserController : ControllerBase
 {
     private readonly IUserService _userService;
 

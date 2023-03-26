@@ -6,7 +6,7 @@ namespace BookMyWeek.Application.Controllers;
 
 [ApiController]
 [Route("api/range")]
-public class RangeController
+public class RangeController : ControllerBase
 {
     private readonly IRangeService _rangeService;
 
