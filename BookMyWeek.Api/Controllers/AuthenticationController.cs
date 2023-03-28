@@ -37,7 +37,7 @@ public class AuthenticationController : ControllerBase
         await HttpContext.SignInAsync(
             CookieAuthenticationDefaults.AuthenticationScheme,
             new ClaimsPrincipal(claimsIdentity));
-        return Ok();
+        return Ok(user.UserId);
     }
 
     [HttpDelete("logout")]

@@ -14,9 +14,9 @@ public static class DependencyInjection
     {
         TypeAdapters.AddAdaptersType();
         serviceCollection
-            .AddSingleton<IUserService, UserService>()
-            .AddSingleton<IRangeService, RangeService>()
-            .AddSingleton<IAuthenticationService, AuthenticationService>();
+            .AddScoped<IUserService, UserService>()
+            .AddScoped<IRangeService, RangeService>()
+            .AddScoped<IAuthenticationService, AuthenticationService>();
         return serviceCollection;
     }
 }

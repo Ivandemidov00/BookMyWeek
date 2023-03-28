@@ -1,4 +1,5 @@
 using BookMyWeek.Application.Range.Interfaces;
+using BookMyWeek.Application.Range.Models;
 using BookMyWeek.Domain;
 using Microsoft.AspNetCore.Mvc;
 
@@ -16,10 +17,27 @@ public class RangeController : ControllerBase
     }
 
     [HttpGet]
-    public async Task<IEnumerable<EventRange>> GetByUser([FromRoute(Name = "userDatabase-id")] string userId, CancellationToken cancellationToken)
-        => await _rangeService.GetByUser(cancellationToken);
-    
+    public async Task<IEnumerable<EventRange>> GetByUser([FromQuery(Name = "userId")] string userId, CancellationToken cancellationToken)
+        => await _rangeService.GetByUser(Guid.Parse(userId), cancellationToken);
+
+    [HttpPost]
+    public async Task AddRange([FromBody] EventRangeDto eventRangeDto, CancellationToken cancellationToken)
+        => await _rangeService.Add(eventRangeDto, cancellationToken);
+
+    [HttpPost("select")]
+    public async Task AgreeRange([FromQuery(Name = "eventId")] string eventId, CancellationToken cancellationToken)
+        => await _rangeService.Agree(eventId, cancellationToken);
+
+    [HttpDelete("select")]
+    public async Task CancelRange([FromQuery(Name = "eventId")] string eventId, CancellationToken cancellationToken)
+        => await _rangeService.Cancel(eventId, cancellationToken);
+            
     [HttpGet("allowed")]
-    public async Task<IEnumerable<AllowedEventRange>> GetAllowedByUser([FromRoute(Name = "userDatabase-id")] string userId, CancellationToken cancellationToken)
-        => await _rangeService.GetAllowedByUser(cancellationToken);
+    public async Task<IEnumerable<AllowRange>> GetAllowedByUser([FromQuery(Name = "userId")] string userId, CancellationToken cancellationToken)
+        => await _rangeService.GetAllowedByUser(Guid.Parse(userId), cancellationToken);
+
+    [HttpPost("allowed")]
+    public async Task AddAllowedRange([FromBody] DateTimeRange dateTimeRange, CancellationToken cancellationToken)
+        => await _rangeService.AddAllowed(dateTimeRange, cancellationToken);
+
 }

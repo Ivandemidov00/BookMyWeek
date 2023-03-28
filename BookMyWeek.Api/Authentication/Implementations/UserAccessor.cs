@@ -4,16 +4,9 @@ namespace BookMyWeek.Application.Authentication.Implementations;
 
 public class UserAccessor : IUserAccessor, IUserInitializer
 {
-    private Domain.User? _user;
+    public Guid UserId { get; set; }
 
-    public Domain.User? User
-    {
-        set => _user = value;
-    }
-
-    public Guid UserId => _user!.UserId;
+    public string Name { get; set; }
     
-    public string Name => _user!.Name;
-    
-    public string Description => _user!.Description;
+    public string Description { get; set; }
 }

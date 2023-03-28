@@ -25,4 +25,8 @@
       </Content>
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Authentication\Interfaces" />
+    </ItemGroup>
+
 </Project>

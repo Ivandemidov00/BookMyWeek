@@ -15,7 +15,7 @@ public static class DependencyInjection
             .AddScoped<UserAccessor>()
             .AddScoped<IUserInitializer>(provider => provider.GetRequiredService<UserAccessor>())
             .AddScoped<IUserAccessor>(provider => provider.GetRequiredService<UserAccessor>());
-
+        
         serviceCollection.AddScoped<UserAccessorMiddleware>();
         
         serviceCollection

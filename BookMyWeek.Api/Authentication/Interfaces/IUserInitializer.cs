@@ -2,5 +2,9 @@ namespace BookMyWeek.Application.Authentication.Interfaces;
 
 public interface IUserInitializer
 {
-    Domain.User? User { set; }
+    public Guid UserId { set; }
+
+    public string Name { set; }
+    
+    public string Description { set; }
 }
