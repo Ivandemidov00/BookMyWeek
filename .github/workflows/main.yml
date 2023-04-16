@@ -2,11 +2,13 @@ name: "main"
 
 on:
   push:
-    branches: ["master"]
+    branches: [ "master" ]
 
 jobs:
   test:
+
     runs-on: ubuntu-latest
+
     steps:
-      - name: Hello Message
-        run: echo "hello"
+    - name: Hello Message
+      run: echo "hello"
