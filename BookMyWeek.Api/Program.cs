@@ -15,5 +15,4 @@ app.UseRouting();
 app.UseSwagger().UseSwaggerUI();
 app.UseCookieAuthorization();
 app.UseEndpoints(endpoints => endpoints.MapControllers().RequireAuthorization());
-
 await app.RunAsync();
