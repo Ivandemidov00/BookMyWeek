@@ -1,3 +1,3 @@
 namespace BookMyWeek.Application.User.Models;
 
-public record UserFindDto(Guid UserId, string Name);
+public record UserFindDto(Guid UserId, string Name, string Description);

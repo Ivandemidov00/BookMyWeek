@@ -25,6 +25,7 @@ public static class DependencyInjection
                 options.Cookie.Name = AuthenticationConstants.CookieName;
                 options.EventsType = typeof(CustomCookieAuthenticationEvents);
                 options.Cookie.SameSite = SameSiteMode.None;
+                options.Cookie.HttpOnly = false;
             });
 
         return serviceCollection;
@@ -35,7 +36,7 @@ public static class DependencyInjection
         builder.UseCookiePolicy(new CookiePolicyOptions
         {
             MinimumSameSitePolicy = SameSiteMode.None,
-            HttpOnly = HttpOnlyPolicy.Always,
+            HttpOnly = HttpOnlyPolicy.None,
             Secure = CookieSecurePolicy.Always
         });
         
