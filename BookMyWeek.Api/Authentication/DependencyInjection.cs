@@ -18,6 +18,10 @@ public static class DependencyInjection
         
         serviceCollection.AddScoped<UserAccessorMiddleware>();
         
+        
+             
+        
+        
         serviceCollection
             .AddSingleton<CustomCookieAuthenticationEvents>()
             .AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
