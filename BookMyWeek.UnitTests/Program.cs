@@ -1,3 +1,12 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿using NUnit.Framework;
 
-Console.WriteLine("Hello, World!");
+namespace BookMyWeek.UnitTests;
+
+public class Test
+{
+    [Test]
+    public void TestMethod()
+    {
+        Assert.AreEqual(true, true); 
+    }
+}
