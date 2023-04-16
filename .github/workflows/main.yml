@@ -2,11 +2,12 @@ name: Actions
 
 on:
   push:
-    branches: master
-    
+    branches:
+      - master
+
 jobs:
   test:
-    runs-on : uduntu-latest
-    steps :
-    - name : Hello Message
-      run : echo "hello"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hello Message
+        run: echo "hello"
