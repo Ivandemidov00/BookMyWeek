@@ -14,6 +14,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookMyWeek.UnitTests", "Boo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookMyWeek.Application", "BookMyWeek.Application\BookMyWeek.Application.csproj", "{16A0C8C3-6C45-4591-AB53-7CA6633D897E}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution items", "Solution items", "{062F4911-C0D2-44FB-B840-11AB51C94285}"
+	ProjectSection(SolutionItems) = preProject
+		StaticFiles\index.html = StaticFiles\index.html
+		StaticFiles\main.js = StaticFiles\main.js
+		StaticFiles\profile.html = StaticFiles\profile.html
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

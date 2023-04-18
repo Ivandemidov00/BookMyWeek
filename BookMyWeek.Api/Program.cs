@@ -14,6 +14,7 @@ var app = builder.Build();
 app.UseRouting();
 app.UseSwagger().UseSwaggerUI();
 app.UseCookieAuthorization();
+app.UseBookMyWeek();
 app.UseEndpoints(endpoints => endpoints.MapControllers().RequireAuthorization());
 
 await app.RunAsync();
